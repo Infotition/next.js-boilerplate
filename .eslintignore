@@ -3,6 +3,7 @@
 /.pnp
 .pnp.js
 typings.ts
+next.config.js
 
 # testing
 /coverage
