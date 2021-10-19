@@ -1,0 +1,32 @@
+@import 'app.scss';
+
+.content {
+  color: $text-color;
+  grid-column: span 12;
+  text-align: center;
+
+  @include breakpoint('md') {
+    grid-column: 3 / 11;
+  }
+
+  @include breakpoint('xl') {
+    grid-column: 4 / 10;
+  }
+}
+
+.title {
+  color: $color-primary;
+}
+
+.author {
+  font-size: 2.2rem;
+  font-weight: lighter;
+  letter-spacing: .05rem;
+  text-transform: lowercase;
+
+  a {
+    color: $text-color;
+    font-style: italic;
+  }
+}
+

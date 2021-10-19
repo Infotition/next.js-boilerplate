@@ -1,0 +1,64 @@
+{
+  "name": "codeli",
+  "version": "0.1.0",
+  "author": "infotition",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint && npm run lint:scss",
+    "lint:scss": "stylelint ./app/**/*.scss --syntax scss --fix ; exit 0",
+    "lint:js": "next lint",
+    "test:unit": "jest --passWithNoTests",
+    "type:check": "tsc",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.3.1",
+    "axios": "^0.23.0",
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.43.2"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/dom": "^8.10.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.1",
+    "@types/react": "^17.0.30",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "babel-jest": "^27.3.1",
+    "cypress": "^8.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "husky": "^7.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown",
+    "*.{js,jsx,ts,tsx}": "eslint",
+    "*.{css,scss}": "stylelint"
+  }
+}
